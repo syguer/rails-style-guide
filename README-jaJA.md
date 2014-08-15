@@ -429,7 +429,7 @@ PDF形式やHTML形式のコピーは[Transmuter](https://github.com/TechnoGate/
   end
 
   # 良い例
-  Person.all.find_each do |person|
+  Person.find_each do |person|
     person.do_awesome_stuff
   end
 
@@ -694,11 +694,11 @@ PDF形式やHTML形式のコピーは[Transmuter](https://github.com/TechnoGate/
   ```Ruby
   # 悪い例
   詳細は下記のリンクをご参照ください。
-  = link_to 'こちら', url_for(course_path(@course))
+  = link_to 'こちら', course_path(@course)
 
   # 良い例
   詳細は下記のリンクをご参照ください。
-  = link_to 'こちら', url_for(course_url(@course))
+  = link_to 'こちら', course_url(@course)
   ```
 
 * <a name="email-addresses"></a>
