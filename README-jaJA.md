@@ -306,7 +306,7 @@ PDF形式やHTML形式のコピーは[Transmuter](https://github.com/TechnoGate/
   ```Ruby
   # 悪い例
   def amount
-    write_attributee(:amount, 100)
+    write_attribute(:amount, 100)
   end
 
   # 良い例
