@@ -16,6 +16,7 @@ PDF形式やHTML形式のコピーは[Transmuter](https://github.com/TechnoGate/
 *  [中国語(繁体)](https://github.com/JuanitoFatas/rails-style-guide/blob/master/README-zhTW.md)
 * [ロシア語](https://github.com/arbox/rails-style-guide/blob/master/README-ruRU.md)
 * [トルコ語](https://github.com/tolgaavci/rails-style-guide/blob/master/README-trTR.md)
+* [日本語](hhttps://github.com/satour/rails-style-guide/blob/master/README-jaJA.md)
 
 # The Rails Style Guide
 
@@ -494,7 +495,7 @@ PDF形式やHTML形式のコピーは[Transmuter](https://github.com/TechnoGate/
 <sup>[[link](#foreign-key-constraints)]</sup>
 
 * <a name="change-vs-up-down"></a>
-  スキーマを変更する(テーブルの追加、フィールドの追加など)migrationを書くときは、`up`や`down`でなく`change`を利用しましょう。 
+  スキーマを変更する(テーブルの追加、フィールドの追加など)migrationを書くときは、`up`や`down`でなく`change`を利用しましょう。
 <sup>[[link](#change-vs-up-down)]</sup>
 
   ```Ruby
@@ -833,7 +834,7 @@ PDF形式やHTML形式のコピーは[Transmuter](https://github.com/TechnoGate/
 
 # このガイドを広めてください
 
-このガイドは有志のコミュニティによって作成されるものです。そもそも存在が世に知られないと、このガイド自体が意味のないものになってしまいます。このページをご覧になった方には、ぜひこのガイドについてTwitterでつぶやいたり、友達や同僚にシェアして、このガイドの存在を広めていただけるようお願いします。 全てのコメント・提案・意見がこのガイドをより良いものにしていきます。 
+このガイドは有志のコミュニティによって作成されるものです。そもそも存在が世に知られないと、このガイド自体が意味のないものになってしまいます。このページをご覧になった方には、ぜひこのガイドについてTwitterでつぶやいたり、友達や同僚にシェアして、このガイドの存在を広めていただけるようお願いします。 全てのコメント・提案・意見がこのガイドをより良いものにしていきます。
 
 親愛をこめて<br/>
 [Bozhidar](https://twitter.com/bbatsov)
