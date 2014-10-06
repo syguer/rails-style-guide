@@ -166,6 +166,53 @@ PDF形式やHTML形式のコピーは[Transmuter](https://github.com/TechnoGate/
 * <a name="shared-instance-variables"></a>
   controller と view の間でやりとりするインスタンス変数は2つまでに留めておきましょう。<sup>[[link](#shared-instance-variables)]</sup>
 
+* <a name="avoid-using-helper"></a>
+  できるだけcontrollerからヘルパーメソッドを使わないようにしましょう。どうしても使いたい場合はincludeするのではなく、用意された方法で呼び出しましょう。<sup>[[link](#avoid-using-helper)]</sup>
+
+  ```Ruby
+  # 良くない例
+  class PostsController < ApplicationController
+    include PostsHelper
+    ...
+    def some_action
+      @value = helper_method(@post.title)
+      ...
+    end
+  end
+
+  # あまり良くない例
+  class PostsController < ApplicationController
+    ...
+    def some_action
+      @value = view_context.helper_method(@post.title)
+      ...
+    end
+  end
+
+  # あまり良くない例
+  class PostsController < ApplicationController
+    ...
+    def some_action
+      @value = self.class.helpers.helper_method(@post.title)
+      ...
+    end
+  end
+
+  # あまり良くない例
+  class PostsController < ApplicationController
+    helper_method :helper_method
+    ...
+    def some_action
+      @value = helper_method(@post.title)
+      ...
+    end
+
+    def helper_method
+      # do something
+    end
+  end
+  ```
+
 ## Models
 
 * <a name="model-classes"></a>
